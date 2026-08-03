@@ -1,3 +1,4 @@
+```
 src/
 ├── components/           # Các component giao diện dùng chung
 ├── hooks/                # Nơi chứa các Typed Hooks đã ép kiểu sẵn
@@ -16,3 +17,4 @@ src/
 │   └── AdvancedPage.tsx  # Trang demo của bài nâng cao (Bọc advancedStore)
 ├── App.tsx               # Router chính và thanh điều hướng (Navbar)
 └── index.tsx             # File root khởi chạy ứng dụng (BrowserRouter)
+```
