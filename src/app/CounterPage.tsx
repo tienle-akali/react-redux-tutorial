@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Provider } from "react-redux";
-import { basicStore } from "../stores/basicStore";
-import { useBasicAppSelector, useBasicAppDispatch } from "../hooks/basicHooks";
+import { useBasicAppDispatch, useBasicAppSelector } from "../hooks/basicHooks";
 import {
-  increment,
   decrement,
+  increment,
   incrementByAmount,
 } from "../slices/counter/basicCounterSlice";
+import { basicStore } from "../stores/basicStore";
 
 function CounterDemo() {
   const count = useBasicAppSelector((state) => state.counter.value);

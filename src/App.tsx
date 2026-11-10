@@ -1,7 +1,6 @@
-import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
-import CounterPage from "./app/CounterPage";
+import { Link, Route, Routes } from "react-router-dom";
 import AdvancedPage from "./app/AdvancedPage";
+import CounterPage from "./app/CounterPage";
 
 function App() {
   return (

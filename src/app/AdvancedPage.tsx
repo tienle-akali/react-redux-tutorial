@@ -1,21 +1,20 @@
-import React from "react";
 import { Provider } from "react-redux";
-import { advancedStore } from "../stores/advancedStore";
 import {
-  useAdvancedAppSelector,
   useAdvancedAppDispatch,
+  useAdvancedAppSelector,
 } from "../hooks/advancedHooks";
 import {
-  increment,
   decrement,
+  increment,
   incrementAsync,
 } from "../slices/counter/advancedCounterSlice";
 import { useGetPostsQuery } from "../slices/counter/postsApi";
+import { advancedStore } from "../stores/advancedStore";
 
 function AdvancedDemo() {
   const count = useAdvancedAppSelector((state) => state.advancedCounter.value);
   const status = useAdvancedAppSelector(
-    (state) => state.advancedCounter.status
+    (state) => state.advancedCounter.status,
   );
   const dispatch = useAdvancedAppDispatch();
 
@@ -52,10 +51,18 @@ function AdvancedDemo() {
       {isLoading && <p>Đang tải bài viết...</p>}
       {isError && <p>Lỗi khi load dữ liệu!</p>}
 
-      <ul style={{ listStyleType: "none", padding: 0 }}>
+      <ul
+        style={{
+          listStyleType: "none",
+          padding: 0,
+          textAlign: "left",
+          maxWidth: "400px",
+          margin: "0 auto",
+        }}
+      >
         {posts?.map((post: any) => (
           <li key={post.id} style={{ margin: "5px 0" }}>
-            {post.title}
+            {post.id}. {post.title}
           </li>
         ))}
       </ul>
